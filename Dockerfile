@@ -1,5 +1,6 @@
-FROM openjdk:12-alpine
-RUN apk add --no-cache bash
+FROM openjdk:13-alpine
+
+RUN apk add --no-cache bash fontconfig freetype freetype-dev msttcorefonts-installer update-ms-fonts fc-cache
 
 WORKDIR /home
 RUN wget https://fauna-repo.s3.amazonaws.com/fdm/fdm.zip
